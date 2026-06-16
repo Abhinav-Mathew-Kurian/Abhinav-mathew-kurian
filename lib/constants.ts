@@ -20,7 +20,8 @@ export const CONTACT = {
 
 export const SOCIAL = {
   github: "https://github.com/Abhinav-Mathew-Kurian",
-  linkedin: "https://linkedin.com/in/abhinav-mathew-kurian-553042245",
+  linkedin: "https://www.linkedin.com/in/abhinav-mathew-kurian-553042245",
+  instagram: "https://www.instagram.com/itsabhinav.in",
 } as const;
 
 export const NAV_LINKS = [

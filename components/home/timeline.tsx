@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "motion/react";
 import { SectionHeading } from "@/components/home/section-heading";
 import { FadeIn } from "@/components/home/fade-in";
 import type { ExperienceItem } from "@/lib/data";
@@ -20,7 +23,15 @@ export function Timeline({
         title="Where the work happened."
       />
 
-      <div className="mt-10 space-y-10 border-l border-border pl-8">
+      <div className="relative mt-10 space-y-10 pl-8">
+        <motion.div
+          initial={{ scaleY: 0 }}
+          whileInView={{ scaleY: 1 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          style={{ transformOrigin: "top" }}
+          className="absolute top-0 bottom-0 left-0 w-px bg-border"
+        />
         {experience.map((item, i) => (
           <FadeIn key={item.title + item.org} delay={i * 0.08} className="relative">
             <span

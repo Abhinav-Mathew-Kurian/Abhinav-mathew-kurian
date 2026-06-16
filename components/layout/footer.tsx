@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { Logo } from "@/components/logo/Logo";
-import { GithubIcon, LinkedinIcon } from "@/components/icons/brand-icons";
+import { GithubIcon, LinkedinIcon, InstagramIcon } from "@/components/icons/brand-icons";
 import { NAV_LINKS, RESUME_LINK, CONTACT, SOCIAL } from "@/lib/constants";
 
 export function Footer() {
@@ -89,6 +89,15 @@ export function Footer() {
                   className="text-muted-foreground transition-colors hover:text-foreground"
                 >
                   <LinkedinIcon className="size-5" />
+                </a>
+                <a
+                  href={SOCIAL.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  <InstagramIcon className="size-5" />
                 </a>
               </div>
             </div>

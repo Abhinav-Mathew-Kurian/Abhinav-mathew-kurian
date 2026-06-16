@@ -8,7 +8,7 @@ export function ProjectDescription({ text }: { text: string }) {
   const blocks = text.split("\n\n").filter(Boolean);
 
   return (
-    <div className="space-y-5 text-base leading-[1.7] text-muted-foreground">
+    <div className="space-y-5 text-base leading-[1.7] break-words text-muted-foreground">
       {blocks.map((block, i) => {
         const lines = block.split("\n").filter(Boolean);
         const isBulletBlock = lines.every((line) => line.trim().startsWith("• "));

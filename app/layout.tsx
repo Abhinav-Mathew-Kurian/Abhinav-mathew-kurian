@@ -57,10 +57,22 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Person",
     name: SITE.name,
+    alternateName: "Abhinav",
     jobTitle: SITE.role,
     url: SITE.url,
+    image: `${SITE.url}/images/profilePicMain.png`,
     email: `mailto:abhinavmathewkurian@gmail.com`,
-    sameAs: [SOCIAL.github, SOCIAL.linkedin],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Trivandrum",
+      addressRegion: "Kerala",
+      addressCountry: "IN",
+    },
+    worksFor: {
+      "@type": "Organization",
+      name: "Kottackal Business Solutions",
+    },
+    sameAs: [SOCIAL.github, SOCIAL.linkedin, SOCIAL.instagram],
   };
 
   return (

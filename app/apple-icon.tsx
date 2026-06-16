@@ -18,15 +18,17 @@ export default function AppleIcon() {
           borderRadius: 28,
         }}
       >
-        <svg width="120" height="120" viewBox="0 0 100 100">
-          <g stroke="#C98A3E" strokeWidth="5" strokeLinecap="round">
-            <line x1="50" y1="22" x2="50" y2="36" />
-            <line x1="50" y1="64" x2="50" y2="78" />
-            <line x1="22" y1="50" x2="36" y2="50" />
-            <line x1="64" y1="50" x2="78" y2="50" />
-          </g>
-          <circle cx="50" cy="50" r="13" fill="#EAE6DC" />
-        </svg>
+        <div
+          style={{
+            fontFamily: "monospace",
+            fontWeight: 700,
+            fontSize: 108,
+            color: "#C98A3E",
+            lineHeight: 1,
+          }}
+        >
+          A
+        </div>
       </div>
     ),
     { ...size }

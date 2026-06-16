@@ -172,6 +172,24 @@
     border-bottom: 1px solid var(--blueline);
     border-right: 1px solid var(--blueline);
   }
+
+  /* Terminal-style block cursor — used by the logo wordmark and the
+     hero headline's typewriter effect. A crisp on/off blink (steps),
+     not a fade, to read as a real text cursor. */
+  .cursor-blink {
+    animation: cursor-blink 1.1s steps(1) infinite;
+  }
+}
+
+@keyframes cursor-blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -6,7 +6,7 @@ import { PROJECT_STATUS_LABEL, type ProjectCardData } from "@/lib/data";
 /** Shared "spec sheet" project card used on the homepage and the /projects listing. */
 export function ProjectCard({ project }: { project: ProjectCardData }) {
   return (
-    <div className="glass glow-border group flex h-full flex-col rounded-md border p-6">
+    <div className="glass glow-border group flex h-full flex-col rounded-md border p-6 transition-transform duration-300 ease-out hover:-translate-y-1">
       <div className="label-mono flex items-center justify-between text-muted-foreground">
         <span>{project.period ?? PROJECT_STATUS_LABEL[project.status]}</span>
         <ArrowUpRight className="size-4 -translate-y-0.5 translate-x-0.5 opacity-0 transition-all group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100" />

@@ -4,15 +4,10 @@ import Link from "next/link";
 import { motion } from "motion/react";
 import { ArrowRight, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { GithubIcon, LinkedinIcon } from "@/components/icons/brand-icons";
-import { SystemDiagram } from "@/components/home/system-diagram";
+import { GithubIcon, LinkedinIcon, InstagramIcon } from "@/components/icons/brand-icons";
+import { HeroPhoto } from "@/components/home/hero-photo";
+import { Typewriter } from "@/components/effects/typewriter";
 import { SOCIAL, CONTACT, SITE } from "@/lib/constants";
-
-const TITLE_BLOCK = [
-  { label: "Role", value: "Full-Stack Developer, Kottackal Business Solutions" },
-  { label: "Location", value: SITE.location },
-  { label: "Status", value: "Available for freelance work" },
-];
 
 export function Hero() {
   return (
@@ -35,9 +30,10 @@ export function Hero() {
             transition={{ duration: 0.55, delay: 0.08 }}
             className="mt-4 font-mono text-[2.75rem] leading-[1.02] font-semibold tracking-tight text-foreground sm:text-[3.75rem] lg:text-[4.25rem]"
           >
-            Full-stack &amp;
-            <br />
-            AI systems architect.
+            <Typewriter
+              text={"Full-stack &\nAI systems architect."}
+              startDelay={300}
+            />
           </motion.h1>
 
           <motion.p
@@ -53,19 +49,17 @@ export function Hero() {
             freelance work on the side.
           </motion.p>
 
-          <motion.dl
+          <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.24 }}
-            className="glass mt-8 grid max-w-xl grid-cols-1 gap-3 rounded-md border p-4 sm:grid-cols-3"
+            className="mt-8"
           >
-            {TITLE_BLOCK.map((field) => (
-              <div key={field.label}>
-                <dt className="label-mono text-muted-foreground">{field.label}</dt>
-                <dd className="mt-1 text-sm text-foreground">{field.value}</dd>
-              </div>
-            ))}
-          </motion.dl>
+            <span className="label-mono text-muted-foreground">Role</span>
+            <p className="mt-1 font-mono text-sm font-medium text-foreground">
+              Full-Stack Developer, Kottackal Business Solutions
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
@@ -117,6 +111,15 @@ export function Hero() {
               <LinkedinIcon className="size-5" />
             </a>
             <a
+              href={SOCIAL.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+              className="text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <InstagramIcon className="size-5" />
+            </a>
+            <a
               href={`mailto:${CONTACT.email}`}
               aria-label="Email"
               className="text-muted-foreground transition-colors hover:text-foreground"
@@ -126,7 +129,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <SystemDiagram />
+        <HeroPhoto />
       </div>
     </section>
   );

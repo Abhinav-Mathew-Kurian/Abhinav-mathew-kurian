@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -51,53 +52,69 @@ export default async function AboutPage() {
           title="The full CV — everything that didn't fit on the homepage."
         />
 
-        <FadeIn className="mt-8 space-y-5 text-base leading-[1.7] text-muted-foreground">
-          <p>
-            I&apos;m Abhinav Mathew Kurian — a full-stack &amp; AI systems
-            architect with about two years of experience independently
-            designing and shipping complex, multi-system applications.
-            That&apos;s spanned the MERN stack, blockchain (ZK proofs,
-            ERC-721), real-time IoT pipelines, graph databases, and
-            AI-integrated platforms.
-          </p>
-          <p>
-            I&apos;m comfortable owning the full lifecycle — from system
-            architecture decisions through to AWS production deployment —
-            and I care more about whether a system holds up under real
-            conditions than whether the demo looks good.
-          </p>
-          <p>
-            Currently full-time at Kottackal Business Solutions, taking on a
-            small number of freelance projects on the side.
-          </p>
-        </FadeIn>
+        <div className="mt-8 grid gap-10 lg:grid-cols-[1.3fr_0.9fr] lg:items-start">
+          <div>
+            <FadeIn className="space-y-5 text-base leading-[1.7] text-muted-foreground">
+              <p>
+                I&apos;m Abhinav Mathew Kurian — a full-stack &amp; AI systems
+                architect with about two years of experience independently
+                designing and shipping complex, multi-system applications.
+                That&apos;s spanned the MERN stack, blockchain (ZK proofs,
+                ERC-721), real-time IoT pipelines, graph databases, and
+                AI-integrated platforms.
+              </p>
+              <p>
+                I&apos;m comfortable owning the full lifecycle — from system
+                architecture decisions through to AWS production deployment —
+                and I care more about whether a system holds up under real
+                conditions than whether the demo looks good.
+              </p>
+              <p>
+                Currently full-time at Kottackal Business Solutions, taking on
+                a small number of freelance projects on the side.
+              </p>
+            </FadeIn>
 
-        <FadeIn delay={0.08} className="glass mt-10 grid grid-cols-2 gap-6 rounded-md border p-6 sm:grid-cols-4">
-          {QUICK_FACTS.map((fact) => (
-            <div key={fact.label}>
-              <dt className="label-mono text-muted-foreground">{fact.label}</dt>
-              <dd className="mt-1.5 text-sm text-foreground">{fact.value}</dd>
+            <FadeIn delay={0.08} className="glass mt-10 grid grid-cols-2 gap-6 rounded-md border p-6">
+              {QUICK_FACTS.map((fact) => (
+                <div key={fact.label}>
+                  <dt className="label-mono text-muted-foreground">{fact.label}</dt>
+                  <dd className="mt-1.5 text-sm text-foreground">{fact.value}</dd>
+                </div>
+              ))}
+            </FadeIn>
+
+            <FadeIn delay={0.12} className="mt-10 flex flex-wrap gap-4">
+              <Button
+                nativeButton={false}
+                render={<Link href="/contact" />}
+                className="rounded-md bg-primary text-primary-foreground hover:bg-primary/90"
+              >
+                Get in touch <ArrowRight className="ml-1 size-4" />
+              </Button>
+              <Button
+                variant="outline"
+                className="glow-border rounded-md"
+                nativeButton={false}
+                render={<a href="/resume" target="_blank" rel="noopener noreferrer" />}
+              >
+                <FileText className="size-4" /> Download résumé
+              </Button>
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={0.1} className="mx-auto w-full max-w-[280px] lg:max-w-none">
+            <div className="corner-marks overflow-hidden rounded-md border border-border">
+              <Image
+                src="/images/portfoliProfileimage.png"
+                alt="Abhinav Mathew Kurian"
+                width={480}
+                height={560}
+                className="h-auto w-full object-cover"
+              />
             </div>
-          ))}
-        </FadeIn>
-
-        <FadeIn delay={0.12} className="mt-10 flex flex-wrap gap-4">
-          <Button
-            nativeButton={false}
-            render={<Link href="/contact" />}
-            className="rounded-md bg-primary text-primary-foreground hover:bg-primary/90"
-          >
-            Get in touch <ArrowRight className="ml-1 size-4" />
-          </Button>
-          <Button
-            variant="outline"
-            className="glow-border rounded-md"
-            nativeButton={false}
-            render={<a href="/resume" target="_blank" rel="noopener noreferrer" />}
-          >
-            <FileText className="size-4" /> Download résumé
-          </Button>
-        </FadeIn>
+          </FadeIn>
+        </div>
       </section>
 
       <Timeline experience={experience} index={2} detailed />
