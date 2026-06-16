@@ -42,11 +42,11 @@ export function Hero() {
             transition={{ duration: 0.55, delay: 0.16 }}
             className="mt-6 max-w-xl text-base leading-[1.7] text-muted-foreground"
           >
-            I design and ship production systems most teams won&apos;t
-            touch — zero-knowledge identity proofs, graph-based clinical
-            risk models, and PKI-secured telemetry with live key rotation.
-            Full-time at Kottackal Business Solutions; open to select
-            freelance work on the side.
+            Specialized in high-stakes production systems: zero-knowledge
+            identity proofs, graph-based clinical risk models, and
+            PKI-secured telemetry with live key rotation. Full-time at
+            Kottackal Business Solutions, open to select freelance work
+            on the side.
           </motion.p>
 
           <motion.div
