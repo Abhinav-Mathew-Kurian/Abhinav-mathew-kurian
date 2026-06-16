@@ -25,7 +25,7 @@ const CATEGORY_ICON: Record<string, LucideIcon> = {
 };
 
 /**
- * Set as a spec-sheet index, not a card grid: domain on the left, a
+ * Set as a spec sheet, not a card grid: domain on the left, a
  * dotted leader bridging to the tool list on the right — the same
  * device a table of contents or a datasheet pinout uses to pair a
  * label with its value. Rows are free to be whatever height their

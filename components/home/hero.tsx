@@ -21,7 +21,7 @@ export function Hero() {
             className="label-mono"
             style={{ color: "var(--blueline)" }}
           >
-            {SITE.name} — Index 01
+            {SITE.name}
           </motion.p>
 
           <motion.h1
