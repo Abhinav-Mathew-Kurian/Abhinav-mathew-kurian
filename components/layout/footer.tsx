@@ -14,9 +14,9 @@ export function Footer() {
           <div className="max-w-sm">
             <Logo />
             <p className="mt-4 text-sm leading-[1.7] text-muted-foreground">
-              Full-stack &amp; AI systems architect — blockchain
-              credentialing, graph databases, and real-time telemetry, end
-              to end.
+              Full-stack &amp; AI systems architect working across
+              blockchain credentialing, graph databases, and real-time
+              telemetry.
             </p>
           </div>
 

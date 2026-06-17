@@ -58,7 +58,7 @@ export function ContactForm() {
 
       setSubmitted(true);
       reset();
-      toast.success("Enquiry sent — I'll get back to you within a day.");
+      toast.success("Enquiry sent. Expect a reply within a day.");
     } catch (err) {
       toast.error(err instanceof Error ? err.message : "Failed to send enquiry");
     }
@@ -68,11 +68,11 @@ export function ContactForm() {
     return (
       <div className="glass glow-border rounded-xl p-8 text-center">
         <h3 className="text-lg font-semibold text-foreground">
-          Thanks — message received!
+          Thanks, message received!
         </h3>
         <p className="mt-2 text-sm text-muted-foreground">
-          I usually reply within a day. In the meantime, feel free to reach
-          out directly via phone, email, or WhatsApp.
+          Replies usually land within a day. In the meantime, feel free to
+          reach out directly via phone, email, or WhatsApp.
         </p>
         <Button
           variant="outline"

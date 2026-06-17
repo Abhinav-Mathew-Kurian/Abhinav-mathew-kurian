@@ -79,7 +79,8 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${plexSans.variable} ${plexMono.variable} dark h-full antialiased`}
+      className={`${plexSans.variable} ${plexMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <body className="min-h-full bg-background text-foreground">
         <script
@@ -91,7 +92,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </div>
-        <Toaster richColors theme="dark" />
+        <Toaster richColors />
         <Analytics />
       </body>
     </html>

@@ -47,7 +47,7 @@ export function Skills({
         index={index}
         eyebrow="Skills"
         title="Eight domains, one stack."
-        description="The tools and protocols behind the systems above — grouped the same way they show up in production."
+        description="The tools and protocols behind the systems above, grouped the same way they show up in production."
       />
 
       <div className="mt-10 border-t border-border">

@@ -48,7 +48,7 @@ export function Navbar() {
           </a>
         </div>
 
-        <div className="hidden md:block">
+        <div className="hidden items-center gap-2 md:flex">
           <Button
             className="rounded-md bg-primary text-primary-foreground hover:bg-primary/90"
             nativeButton={false}
@@ -58,13 +58,15 @@ export function Navbar() {
           </Button>
         </div>
 
-        <button
-          aria-label={open ? "Close menu" : "Open menu"}
-          className="inline-flex items-center justify-center rounded-md p-2 text-foreground md:hidden"
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X className="size-6" /> : <Menu className="size-6" />}
-        </button>
+        <div className="flex items-center gap-1 md:hidden">
+          <button
+            aria-label={open ? "Close menu" : "Open menu"}
+            className="inline-flex items-center justify-center rounded-md p-2 text-foreground"
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="size-6" /> : <Menu className="size-6" />}
+          </button>
+        </div>
       </nav>
 
       {open && (

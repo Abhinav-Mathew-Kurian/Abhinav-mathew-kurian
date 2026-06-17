@@ -7,7 +7,7 @@ import { CONTACT } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch for freelance projects or full-time opportunities — Abhinav Mathew Kurian, Full-Stack & AI Systems Architect.",
+    "Get in touch with Abhinav Mathew Kurian, Full-Stack & AI Systems Architect, for freelance projects or full-time opportunities.",
 };
 
 const QUICK_LINKS = [
@@ -36,7 +36,7 @@ export default function ContactPage() {
         index={1}
         eyebrow="Contact"
         title="Start a conversation."
-        description="Fill out the form below, or reach out directly — whichever's easiest."
+        description="Fill out the form below, or reach out directly. Whichever's easiest."
       />
 
       <div className="mt-8 flex flex-wrap items-center gap-3">

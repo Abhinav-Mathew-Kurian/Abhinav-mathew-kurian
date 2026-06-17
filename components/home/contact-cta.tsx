@@ -10,15 +10,15 @@ export function ContactCta() {
       <FadeIn>
         <div className="glass corner-marks rounded-md border p-10 text-center sm:p-16">
           <p className="label-mono" style={{ color: "var(--blueline)" }}>
-            § 05 — Contact
+            § 05 · Contact
           </p>
           <h2 className="mt-4 font-mono text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
             Got a system worth building?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-[1.7] text-muted-foreground">
-            I take on a small number of freelance projects alongside my
-            full-time role. Tell me what you&apos;re building — I reply
-            within a day.
+            A small number of freelance projects run alongside the full-time
+            role at Kottackal. Reach out with what&apos;s being built;
+            replies land within a day.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">

@@ -49,7 +49,7 @@ export default async function AdminProjectsPage() {
             {projects.length === 0 && (
               <TableRow>
                 <TableCell colSpan={5} className="text-center text-muted-foreground">
-                  No projects yet — create your first one.
+                  No projects yet. Create your first one.
                 </TableCell>
               </TableRow>
             )}

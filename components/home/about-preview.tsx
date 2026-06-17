@@ -24,12 +24,12 @@ export function AboutPreview() {
         <div className="mt-10 grid gap-10 lg:grid-cols-[1.2fr_1fr]">
           <div>
             <p className="text-base leading-[1.7] text-muted-foreground">
-              I&apos;m a full-stack &amp; AI systems architect — I design and
-              ship complex, multi-system applications end to end: blockchain
-              credentialing (ZK proofs, ERC-721), graph databases of clinical
-              relationships, real-time IoT telemetry, and AI-integrated
-              retrieval layers. I own the full lifecycle, from architecture
-              decisions to AWS production deployment.
+              A full-stack &amp; AI systems architect shipping complex,
+              multi-system applications end to end: blockchain credentialing
+              (ZK proofs, ERC-721), graph databases of clinical relationships,
+              real-time IoT telemetry, and AI-integrated retrieval layers.
+              Ownership runs the full lifecycle, from architecture decisions
+              to AWS production deployment.
             </p>
             <Button
               variant="outline"

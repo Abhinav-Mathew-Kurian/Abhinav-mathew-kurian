@@ -50,7 +50,7 @@ export function SettingsForm({ resumeUrl }: { resumeUrl: string }) {
         />
         <p className="text-xs text-muted-foreground">
           Upload your PDF somewhere (Google Drive, Cloudinary, GitHub) and
-          paste the direct link here — or upload a new file to{" "}
+          paste the direct link here, or upload a new file to{" "}
           <code className="font-mono">public/resume/</code> and link to it
           with a path like <code className="font-mono">/resume/file.pdf</code>.
           The public <code className="font-mono">/resume</code> link on the
