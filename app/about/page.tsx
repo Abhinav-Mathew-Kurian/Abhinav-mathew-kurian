@@ -13,7 +13,7 @@ import { SITE } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Full CV — Abhinav Mathew Kurian, full-stack & AI systems architect working across blockchain, graph databases, and real-time systems.",
+    "Full CV for Abhinav Mathew Kurian, full-stack & AI systems architect working across blockchain, graph databases, and real-time systems.",
 };
 
 const QUICK_FACTS = [
@@ -27,14 +27,13 @@ const EDUCATION = {
   degree: "B.Tech, Computer Science Engineering",
   school: "Vimal Jyothi Engineering College",
   period: "09/2020 – 06/2024",
-  detail: "8.19 CGPA",
 };
 
 const CERTIFICATES = [
-  "React, NodeJS, Express & MongoDB — The MERN Fullstack Guide",
-  "Google Cloud Career — Cloud Engineer Track",
+  "React, NodeJS, Express & MongoDB: The MERN Fullstack Guide",
+  "Google Cloud Career: Cloud Engineer Track",
   "The Complete Full-Stack Web Development Bootcamp",
-  "AWS Certified Solutions Architect – Associate (SAA-C03) — in progress",
+  "AWS Certified Solutions Architect – Associate (SAA-C03), in progress",
 ];
 
 export default async function AboutPage() {
@@ -49,25 +48,24 @@ export default async function AboutPage() {
         <SectionHeading
           index={1}
           eyebrow="Profile"
-          title="The full CV — everything that didn't fit on the homepage."
+          title="The full CV: everything that didn't fit on the homepage."
         />
 
         <div className="mt-8 grid gap-10 lg:grid-cols-[1.3fr_0.9fr] lg:items-start">
           <div>
             <FadeIn className="space-y-5 text-base leading-[1.7] text-muted-foreground">
               <p>
-                I&apos;m Abhinav Mathew Kurian — a full-stack &amp; AI systems
-                architect with about two years of experience independently
-                designing and shipping complex, multi-system applications.
-                That&apos;s spanned the MERN stack, blockchain (ZK proofs,
-                ERC-721), real-time IoT pipelines, graph databases, and
-                AI-integrated platforms.
+                Abhinav Mathew Kurian: a full-stack &amp; AI systems architect
+                with about two years of experience designing and shipping
+                complex, multi-system applications. That work has spanned
+                the MERN stack, blockchain (ZK proofs, ERC-721), real-time
+                IoT pipelines, graph databases, and AI-integrated platforms.
               </p>
               <p>
-                I&apos;m comfortable owning the full lifecycle — from system
-                architecture decisions through to AWS production deployment —
-                and I care more about whether a system holds up under real
-                conditions than whether the demo looks good.
+                Ownership runs the full lifecycle, from system architecture
+                decisions through to AWS production deployment. What matters
+                more than a polished demo is whether the system holds up
+                under real conditions.
               </p>
               <p>
                 Currently full-time at Kottackal Business Solutions, taking on
@@ -133,7 +131,6 @@ export default async function AboutPage() {
             <p className="mt-1 text-sm" style={{ color: "var(--blueline)" }}>
               {EDUCATION.school}
             </p>
-            <p className="mt-1 text-sm text-muted-foreground">{EDUCATION.detail}</p>
           </FadeIn>
 
           <FadeIn delay={0.06}>
