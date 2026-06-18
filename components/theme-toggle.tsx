@@ -1,8 +1,22 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
+
+const CYCLE: Record<string, string> = { dark: "light", light: "chaos", chaos: "dark" };
+
+const ICONS: Record<string, React.ReactNode> = {
+  dark:  <Moon className="size-4" />,
+  light: <Sun className="size-4" />,
+  chaos: <Sparkles className="size-4" />,
+};
+
+const LABELS: Record<string, string> = {
+  dark:  "Dark mode",
+  light: "Light mode",
+  chaos: "Chaos mode",
+};
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -12,13 +26,15 @@ export function ThemeToggle() {
 
   if (!mounted) return <div className="size-9" />;
 
+  const current = resolvedTheme ?? "dark";
+
   return (
     <button
-      aria-label="Toggle theme"
-      onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+      aria-label={`Switch theme (current: ${LABELS[current] ?? current})`}
+      onClick={() => setTheme(CYCLE[current] ?? "dark")}
       className="inline-flex size-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
     >
-      {resolvedTheme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
+      {ICONS[current] ?? <Moon className="size-4" />}
     </button>
   );
 }
