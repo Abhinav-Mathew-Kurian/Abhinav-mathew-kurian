@@ -4,14 +4,8 @@ import { useTheme } from "next-themes";
 import { Sun, Moon, Waves, Trees, Dices } from "lucide-react";
 import { useEffect, useState } from "react";
 
-// Fixed theme cycle — chaos is dice-only
-const CYCLE: Record<string, string> = {
-  dark: "light",
-  light: "ocean",
-  ocean: "forest",
-  forest: "dark",
-  chaos: "dark",
-};
+// Toggle is dark ↔ light only; dice handles everything else
+const NEXT: Record<string, string> = { light: "dark" }; // default → "light"
 
 const ICONS: Record<string, React.ReactNode> = {
   dark:   <Moon className="size-4" />,
@@ -239,7 +233,7 @@ export function ThemeToggle() {
   if (!mounted) return <div className="size-9" />;
 
   const current = resolvedTheme ?? "dark";
-  const next = CYCLE[current] ?? "dark";
+  const next = NEXT[current] ?? "light";
 
   function handleClick() {
     clearChaosCss();
@@ -248,11 +242,11 @@ export function ThemeToggle() {
 
   return (
     <button
-      aria-label={`Theme: ${LABELS[current] ?? current} — click for ${LABELS[next] ?? next}`}
+      aria-label={`Switch to ${LABELS[next] ?? next} mode`}
       onClick={handleClick}
       className="inline-flex size-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
     >
-      {ICONS[current] ?? <Moon className="size-4" />}
+      {current === "light" ? <Sun className="size-4" /> : <Moon className="size-4" />}
     </button>
   );
 }
