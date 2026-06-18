@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Sun, Moon, Sparkles } from "lucide-react";
+import { Sun, Moon, Sparkles, Dices } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const CYCLE: Record<string, string> = { dark: "light", light: "chaos", chaos: "dark" };
@@ -88,6 +88,23 @@ const LABELS: Record<string, string> = {
   light: "Light mode",
   chaos: "Chaos mode",
 };
+
+export function ChaosButton() {
+  const { setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return <div className="size-9" />;
+
+  return (
+    <button
+      aria-label="Random chaos theme"
+      onClick={() => { applyChaosCss(); setTheme("chaos"); }}
+      className="inline-flex size-9 items-center justify-center rounded-md text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+    >
+      <Dices className="size-4" />
+    </button>
+  );
+}
 
 export function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();

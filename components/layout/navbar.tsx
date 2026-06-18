@@ -6,7 +6,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "@/components/logo/Logo";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { ThemeToggle, ChaosButton } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS, RESUME_LINK } from "@/lib/constants";
 
@@ -50,6 +50,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden items-center gap-2 md:flex">
+          <ChaosButton />
           <ThemeToggle />
           <Button
             className="rounded-md bg-primary text-primary-foreground hover:bg-primary/90"
@@ -61,6 +62,7 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-1 md:hidden">
+          <ChaosButton />
           <ThemeToggle />
           <button
             aria-label={open ? "Close menu" : "Open menu"}
