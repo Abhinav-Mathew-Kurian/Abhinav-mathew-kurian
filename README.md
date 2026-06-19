@@ -2,7 +2,7 @@
 
 # Hey, I'm Abhinav 👋
 
-**Full-Stack & AI Systems Architect** — I build production systems most teams won't touch: zero-knowledge identity proofs, graph-based clinical risk models, and PKI-secured real-time telemetry.
+**Full-Stack & AI Systems Architect** — I build production systems at the hard end of the stack: zero-knowledge identity proofs, graph-based clinical risk models, and PKI-secured real-time telemetry.
 
 Full-time at Kottackal Business Solutions · Open to select freelance work · Trivandrum, Kerala, India
 
