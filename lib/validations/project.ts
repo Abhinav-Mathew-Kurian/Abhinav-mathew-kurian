@@ -12,7 +12,7 @@ export const projectSchema = z.object({
   description: z.string().trim().min(10).max(5000),
   techStack: z.array(z.string().trim().min(1)).default([]),
   keySkills: z.array(z.string().trim().min(1)).default([]),
-  category: z.enum(["freelance", "full-time", "personal"]),
+  category: z.enum(["full-time", "personal"]),
   role: z.string().trim().optional().or(z.literal("")),
   period: z.string().trim().optional().or(z.literal("")),
   liveUrl: z.string().trim().url().optional().or(z.literal("")),

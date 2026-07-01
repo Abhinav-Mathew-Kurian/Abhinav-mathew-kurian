@@ -26,7 +26,7 @@ type FormValues = {
   description: string;
   techStack: string; // comma-separated in the form, split into an array on submit
   keySkills: string; // comma-separated in the form, split into an array on submit
-  category: "freelance" | "full-time" | "personal";
+  category: "full-time" | "personal";
   role: string;
   period: string;
   liveUrl: string;
@@ -174,7 +174,6 @@ export function ProjectForm({ project }: { project?: ProjectDoc }) {
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="freelance">Freelance</SelectItem>
                   <SelectItem value="full-time">Full-time</SelectItem>
                   <SelectItem value="personal">Personal</SelectItem>
                 </SelectContent>

@@ -14,7 +14,7 @@ export type PlaceholderProject = {
   keySkills?: string[];
   liveUrl?: string;
   githubUrl?: string;
-  category?: "freelance" | "full-time" | "personal";
+  category?: "full-time" | "personal";
   role?: string;
   period?: string;
   featured?: boolean;
@@ -32,7 +32,7 @@ export const PLACEHOLDER_PROJECTS: PlaceholderProject[] = [
     keySkills: ["Role-based access control", "Server-Sent Events (SSE)", "AI-grounded chat with guardrails", "Automated testing (Jest + Playwright)", "Payment & subscription tracking"],
     liveUrl: "https://howlfoxacademy.com",
     githubUrl: "https://github.com/Abhinav-Mathew-Kurian/learnspace-v01",
-    category: "freelance",
+    category: "personal",
     period: "2026",
   },
   {
@@ -45,7 +45,7 @@ export const PLACEHOLDER_PROJECTS: PlaceholderProject[] = [
     techStack: ["Next.js 16", "TypeScript", "MongoDB", "NextAuth v5", "Cloudinary", "Leaflet", "OpenAI", "Framer Motion"],
     keySkills: ["AI-powered search", "Geospatial mapping (Leaflet)", "SEO architecture (JSON-LD, dynamic metadata)", "Admin content lifecycle management"],
     liveUrl: "https://sellkerala.com",
-    category: "freelance",
+    category: "personal",
     period: "2026",
   },
   {

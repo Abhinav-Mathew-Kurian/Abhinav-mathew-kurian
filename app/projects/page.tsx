@@ -7,7 +7,7 @@ import { getAllProjects } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Freelance and full-time systems spanning blockchain, graph databases, real-time telemetry, and AI-integrated platforms.",
+    "Full-time and personal projects spanning blockchain, graph databases, real-time telemetry, and AI-integrated platforms.",
 };
 
 export default async function ProjectsPage() {
@@ -19,7 +19,7 @@ export default async function ProjectsPage() {
         index={1}
         eyebrow="Work"
         title="Every system, cataloged."
-        description="Freelance and personal work: case studies, stack, and links for each."
+        description="Production and personal projects: case studies, stack, and links for each."
       />
 
       <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

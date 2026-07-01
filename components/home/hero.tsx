@@ -45,8 +45,7 @@ export function Hero() {
             Specialized in high-stakes production systems: zero-knowledge
             identity proofs, graph-based clinical risk models, and
             PKI-secured telemetry with live key rotation. Full-time at
-            Kottackal Business Solutions, open to select freelance work
-            on the side.
+            Kottackal Business Solutions.
           </motion.p>
 
           <motion.div

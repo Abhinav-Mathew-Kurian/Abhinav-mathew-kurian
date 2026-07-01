@@ -33,7 +33,6 @@ export const metadata: Metadata = {
     "AI Systems Architect",
     "MERN Stack Developer",
     "Next.js Developer",
-    "Freelance Developer India",
   ],
   openGraph: {
     title: `${SITE.name} | ${SITE.role}`,

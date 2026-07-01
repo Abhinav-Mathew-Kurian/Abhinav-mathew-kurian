@@ -4,7 +4,7 @@
 
 **Full-Stack & AI Systems Architect** — I build production systems at the hard end of the stack: zero-knowledge identity proofs, graph-based clinical risk models, and PKI-secured real-time telemetry.
 
-Full-time at Kottackal Business Solutions · Open to select freelance work · Trivandrum, Kerala, India
+Full-time at Kottackal Business Solutions · Trivandrum, Kerala, India
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-abhinavmathewkurian.com-C98A3E?style=for-the-badge)](https://abhinavmathewkurian.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/abhinav-mathew-kurian-553042245)

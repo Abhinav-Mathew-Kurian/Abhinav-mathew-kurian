@@ -8,7 +8,7 @@ const FACTS = [
   { label: "Role", value: "Full-Stack Developer, Kottackal Business Solutions" },
   { label: "Focus", value: "Production systems, not demos" },
   { label: "Based in", value: "Trivandrum, Kerala" },
-  { label: "Status", value: "Open to freelance work" },
+  { label: "Experience", value: "~2 years production" },
 ];
 
 export function AboutPreview() {

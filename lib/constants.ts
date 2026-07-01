@@ -8,7 +8,7 @@ export const SITE = {
   url: "https://abhinavmathewkurian.com",
   location: "Trivandrum, Kerala, India",
   description:
-    "Full-stack and AI systems architect working across ZK proofs, graph databases, vector search, and real-time PKI-secured telemetry. Full-time at Kottackal Business Solutions, open to select freelance work.",
+    "Full-stack and AI systems architect working across ZK proofs, graph databases, vector search, and real-time PKI-secured telemetry. Full-time at Kottackal Business Solutions.",
 } as const;
 
 export const CONTACT = {

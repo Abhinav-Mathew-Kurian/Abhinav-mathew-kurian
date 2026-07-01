@@ -11,7 +11,7 @@ const projectSchema = new Schema(
     keySkills: { type: [String], default: [] },
     category: {
       type: String,
-      enum: ["freelance", "full-time", "personal"],
+      enum: ["full-time", "personal"],
       default: "personal",
     },
     role: { type: String },

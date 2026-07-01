@@ -24,7 +24,6 @@ export const DEFAULT_RESUME_URL =
   "/resume/Abhinav_Mathew_Kurian_FlowCV_Resume_2026-06-05.pdf";
 
 export const PROJECT_CATEGORY_LABEL = {
-  freelance: "Freelance",
   "full-time": "Full-time",
   personal: "Personal",
 } as const;
@@ -43,7 +42,7 @@ export type ProjectDoc = {
   description: string;
   techStack: string[];
   keySkills: string[];
-  category: "freelance" | "full-time" | "personal";
+  category: "full-time" | "personal";
   role?: string;
   period?: string;
   liveUrl?: string;

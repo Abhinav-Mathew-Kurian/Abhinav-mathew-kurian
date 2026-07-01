@@ -20,7 +20,7 @@ const QUICK_FACTS = [
   { label: "Role", value: "Full-Stack Developer, Kottackal Business Solutions" },
   { label: "Experience", value: "~2 years, production systems" },
   { label: "Based in", value: SITE.location },
-  { label: "Availability", value: "Open to freelance projects" },
+  { label: "Stack", value: "MERN, AI, Blockchain" },
 ];
 
 const EDUCATION = {
@@ -68,8 +68,7 @@ export default async function AboutPage() {
                 under real conditions.
               </p>
               <p>
-                Currently full-time at Kottackal Business Solutions, taking on
-                a small number of freelance projects on the side.
+                Currently full-time at Kottackal Business Solutions.
               </p>
             </FadeIn>
 

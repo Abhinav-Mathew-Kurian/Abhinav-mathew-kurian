@@ -7,7 +7,7 @@ import { CONTACT } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Abhinav Mathew Kurian, Full-Stack & AI Systems Architect, for freelance projects or full-time opportunities.",
+    "Get in touch with Abhinav Mathew Kurian, Full-Stack & AI Systems Architect, for full-time opportunities or to discuss a project.",
 };
 
 const QUICK_LINKS = [

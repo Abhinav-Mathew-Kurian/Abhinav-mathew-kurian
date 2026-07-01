@@ -3,7 +3,6 @@ import { z } from "zod";
 export const PROJECT_TYPES = [
   "New website or web app",
   "Existing app — fixes/features",
-  "Freelance / contract work",
   "Full-time opportunity",
   "Something else",
 ] as const;

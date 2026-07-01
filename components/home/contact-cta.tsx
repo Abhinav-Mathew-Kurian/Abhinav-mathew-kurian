@@ -16,9 +16,8 @@ export function ContactCta() {
             Got a system worth building?
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-[1.7] text-muted-foreground">
-            A small number of freelance projects run alongside the full-time
-            role at Kottackal. Reach out with what&apos;s being built;
-            replies land within a day.
+            Reach out with what&apos;s being built — replies land within a
+            day.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
