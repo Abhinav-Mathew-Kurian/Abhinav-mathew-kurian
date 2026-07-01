@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { connectToDatabase } from "@/lib/db";
 import { ProjectModel } from "@/lib/models/Project";
 import { projectSchema } from "@/lib/validations/project";
@@ -27,5 +28,7 @@ export async function POST(request: Request) {
   }
 
   const project = await ProjectModel.create(parsed.data);
+  revalidatePath("/");
+  revalidatePath("/projects");
   return NextResponse.json(project, { status: 201 });
 }

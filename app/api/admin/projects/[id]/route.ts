@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 import { connectToDatabase } from "@/lib/db";
 import { ProjectModel } from "@/lib/models/Project";
 import { projectSchema } from "@/lib/validations/project";
@@ -24,12 +25,15 @@ export async function PATCH(request: Request, { params }: RouteParams) {
   }
 
   await connectToDatabase();
-  const project = await ProjectModel.findByIdAndUpdate(id, parsed.data, {
+  const project = await ProjectModel.findByIdAndUpdate(id, { $set: parsed.data }, {
     new: true,
+    runValidators: true,
   });
   if (!project) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
+  revalidatePath("/");
+  revalidatePath("/projects");
   return NextResponse.json(project);
 }
 
@@ -40,5 +44,7 @@ export async function DELETE(_request: Request, { params }: RouteParams) {
   if (!deleted) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
+  revalidatePath("/");
+  revalidatePath("/projects");
   return NextResponse.json({ ok: true });
 }
